@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-color: #1f2937;
+    --light-text: #6b7280;
+    --background: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: var(--background);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.audience-tag {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+/* Stats Section */
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.stat {
+    flex: 0 1 auto;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: var(--light-text);
+    font-size: 1rem;
+}
+
+/* CTA Buttons */
+.cta-button, .primary-cta {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-cta {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+}
+
+.cta-button:hover, .primary-cta:hover {
+    background-color: var(--secondary-color);
+}
+
+.guarantee {
+    margin-top: 1rem;
+    color: var(--light-text);
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .hero {
+        padding: 4rem 0;
+    }
+}
