@@ -22,6 +22,19 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    text-align: center;
+}
+
+/* Construction Banner */
+.construction-banner {
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+    color: #7c2d12;
+    text-align: center;
+    padding: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    z-index: 100;
 }
 
 /* Navigation */
@@ -105,6 +118,11 @@ h2 {
 }
 
 /* CTA Buttons */
+.cta-section {
+    text-align: center;
+    margin: 0 auto;
+}
+
 .cta-button, .primary-cta {
     background-color: var(--primary-color);
     color: white;
@@ -114,6 +132,17 @@ h2 {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button.coming-soon {
+    background-color: #9ca3af;
+    cursor: default;
+}
+
+.cta-button.coming-soon:hover {
+    background-color: #9ca3af;
 }
 
 .primary-cta {
@@ -129,6 +158,81 @@ h2 {
     margin-top: 1rem;
     color: var(--light-text);
     font-size: 0.875rem;
+}
+
+.launch-info {
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Coming Soon Overlay */
+.coming-soon-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon-content {
+    background: linear-gradient(135deg, #f59e0b, #dc2626);
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transform: rotate(-5deg);
+    animation: float 3s ease-in-out infinite;
+}
+
+.coming-soon-content h3 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.coming-soon-content p {
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem 0 0;
+    font-weight: 600;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-cta {
+    margin-top: 2rem;
+}
+
+.modal-cta .primary-cta {
+    background: white;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.modal-cta .primary-cta:hover {
+    background: #f3f4f6;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: rotate(-5deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-5deg) translateY(-20px);
+    }
 }
 
 /* Responsive Design */
